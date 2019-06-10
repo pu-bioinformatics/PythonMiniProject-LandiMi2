@@ -33,8 +33,8 @@ menu(file_name)
 
 def input_options():
     """
-    This functions returns options that you want to choose for protein file analysis"""
-    global file_input
+    This functions returns options that you want to choose for protein file analysis
+    """
     option = input (""" 
     From the Menu, below are the options for you to input. 
     Kindly provide input from the options provided 
@@ -47,13 +47,12 @@ def input_options():
                         
                         Please Enter your choice: """)
     if option.lower() == 'o':
-        #file_name = modules.option_O() #overwriting name variable returned from the function
         file_name = modules.option_O()
-        menu(file_name)
-        input_options()    
+        menu(file_name) #replace none with input file loaded 
+        input_options() #call input option back after you are done with the option selected    
     elif option.lower() == 'i':
-        modules.option_I()
-        input_options()  
+        modules.option_I() #calling modules with this function option_I()
+        input_options() 
     elif option.lower() == 'h':
         modules.option_H()
         input_options()
@@ -74,7 +73,7 @@ def exit2():
     This function is for an exit option 
     """
     exit_plan = input('Do you want to exit (E) or Do you want to go back to menu (M)')
-    exit_plan = exit_plan.upper()
+    exit_plan = exit_plan.upper() #change to capital letters 
     if exit_plan == 'E':
         print ('Awesome!!! Thank you for using this script to browse your PDB file.')
     elif exit_plan == 'M':
